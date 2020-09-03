@@ -9,7 +9,7 @@
 
 ## Problem with introspect
 
-1. Run prisma introspect
+1. Run prisma introspect `yarn prisma introspect`
 2. Notice error running prisma introspect
 
 ```
@@ -31,7 +31,7 @@ error Command failed with exit code 1.
 info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
 ```
 
-3. Note prisma schema is apparently valid
+3. Note prisma schema is apparently valid by running `yarn prisma validate`
 
 ```
 > yarn prisma validate
