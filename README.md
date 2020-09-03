@@ -2,6 +2,7 @@
 
 - yarn v1 (I am using 1.22.4)
 - docker (I am using 2.3.0.4)
+- node v12.16.1
 
 ## Setup db
 
