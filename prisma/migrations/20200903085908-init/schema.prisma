@@ -1,0 +1,33 @@
+datasource db {
+  provider = "postgresql"
+  url = "***"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Post {
+  id        String  @id @default(dbgenerated())
+  title     String
+  content   String?
+  published Boolean @default(false)
+  author    User?   @relation(fields: [authorId], references: [id])
+  authorId  String?
+  tags      Tag[]
+  antitags  Tag[]   @relation("Antitags")
+}
+
+model Tag {
+  id        String @id @default(dbgenerated())
+  label     String
+  posts     Post[]
+  antiposts Post[] @relation("Antitags")
+}
+
+model User {
+  id    String  @id @default(dbgenerated())
+  email String  @unique
+  name  String?
+  posts Post[]
+}
