@@ -1,3 +1,5 @@
+Companion repo for https://github.com/prisma/prisma/issues/3507
+
 ## Prerequisites
 
 - yarn v1 (I am using 1.22.4)
